@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林家誼期中專題-智生活</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/logo.png">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="./images/logo.png" alt=""></div>
+        <nav class="nav-container">
+            <a href="#">關於我們</a>
+            <a href="#">最新消息</a>
+            <a href="#">服務介紹</a>
+            <a href="#">聯絡我們</a>
+        </nav>
+        <div class="header-tools">
+            <a href="#">社區管理後台</a>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>智慧生活，從這裡開始</h1>
+            <p>提供您最專業的管理方案，讓社區管理更輕鬆，更直覺。</p>
+            <a href="#" class="cta-btn">立即體驗</a>
+        </div>
+        <div class="hero-images">
+            <div class="slider-container">
+                <img src="./images/hero.png" id="slide-1" alt="slide1">
+                <img src="./images/hero2.png" id="slide-2" alt="slide2">
+                <img src="./images/hero3.png" id="slide-3" alt="slide3">
+            </div>
+            <div class="slider-dots">
+                <a data-index="0"></a>
+                <a data-index="1"></a>
+                <a data-index="2"></a>
+            </div>
+        </div>
+
+    </section>
+    <section class="features">
+        <div class="feature-card">
+            <h2>包裹代收</h2>
+            <p>不再錯過任何重要信件，系統自動通知領取</p>
+        </div>
+        <div class="feature-card">
+            <h2>社區公告</h2>
+            <p>電子化公告欄，社區大小事一手掌握</p>
+        </div>
+        <div class="feature-card">
+            <h2>管理費繳納</h2>
+            <p>支援多種行動支付，快速完成繳費流程</p>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-image">
+                <img src="./images/info1.png" alt="智慧對講門禁">
+            </div>
+            <div class="info-content">
+                <h2>智慧對講機</h2>
+                <div class="title-line"></div>
+                <p>與社區管理系統結合的社區對講系統，住戶用手機 App 就能與管理中心通話、為訪客遠端開門。</p>
+                <a href="#" class="info-btn">方案諮詢 &rarr;</a>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="info-image">
+                <img src="./images/info3.png" alt="智慧繳費">
+            </div>
+            <div class="info-content">
+                <h2>智慧繳管理費</h2>
+                <div class="title-line"></div>
+                <p>繳交管理費非常方便，可以直接透過手機完成，免去拿實體單據去超商的麻煩</p>
+                <a href="#" class="info-btn">了解更多 &rarr;</a>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-image">
+                <img src="./images/info2.png" alt="智慧郵件收發">
+            </div>
+            <div class="info-content">
+                <h2>智慧包裹櫃</h2>
+                <div class="title-line"></div>
+                <p>包裹到貨自動推播通知，領取時只需掃描 QR Code，省去紙本簽收麻煩，效率提升 200%。</p>
+                <a href="#" class="info-btn">了解更多 &rarr;</a>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy2026智生活Redesign Project</p>
+                <p>統一編號：012345678</p>
+                <p>地址：新北市新店區北新路1段</p>
+
+            </div>
+            <div class="footer-app">
+                <div class="app-item">
+                    <img src="./images/ios-qrcode.png" alt="iOS QR Code">
+                    <span>ios下載</span>
+                </div>
+                <div class="app-item">
+                    <img src="./images/android-qrcode.png" alt="android QR Code">
+                    <span>Android 下載</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const dots = document.querySelectorAll('.slider-dots a');
+        const slider = document.querySelector('.slider-container');
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function (e) {
+                e.preventDefault(); // 阻止頁面跳動
+                const index = this.getAttribute('data-index');
+                slider.scrollLeft = slider.offsetWidth * index;
+            });
+        });
+    </script>
+</body>
+
+</html>
